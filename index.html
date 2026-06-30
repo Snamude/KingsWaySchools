@@ -30,6 +30,32 @@
             }
         }
     </script>
+
+      <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'pastel-brand': '#C084FC',
+                        'pastel-deep': '#7C3AED',
+                        'pastel-ice': '#F3E8FF',
+                        'pastel-slate': '#4B5563',
+                        'pastel-glacier': '#E5E7EB',
+                        'seguku-facade': '#FCF5E3',
+                        'archway-highlight': '#FFFDF0'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .slide {
+            transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
     <!-- Google Fonts: Playfair Display & Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <!-- Font Awesome for modern icons -->
@@ -415,43 +441,366 @@
         <div class="absolute inset-0 bg-[#fffdf0] rounded-r-xl"></div>
         
        <div class="relative p-8 border-l-4 border-pastel-brand bg-[#fffdf0] rounded-r-xl shadow-xl space-y-6">
+       <div class="max-w-6xl w-full mx-auto bg-white/60 backdrop-blur-md border border-amber-100 rounded-3xl p-6 md:p-8 shadow-xl space-y-8">
+        
+        <!-- Header Controls / Navigation Tabs -->
+        <div class="flex flex-col items-center text-center space-y-4">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-[#FEF2D3] text-amber-900 uppercase tracking-wider">
+                Explore our Departments
+            </span>
+            <h2 class="text-3xl font-extrabold text-slate-900">Choose a Learning Stage</h2>
+            <p class="text-sm text-pastel-slate max-w-lg">Click the buttons below to switch sections and discover our tailored programs, campus views, and welcome letters.</p>
             
-            <!-- Card content -->
-            <div class="flex items-center space-x-4">
-               
-               
+            <!-- Tab Button Row -->
+            <div class="flex flex-wrap justify-center gap-3 p-1.5 bg-slate-100/80 rounded-2xl w-full max-w-2xl mt-4 border border-slate-200">
+                <button onclick="switchTab('nursery')" id="tab-nursery" class="tab-btn px-5 py-3 rounded-xl font-bold text-sm transition-all flex items-center gap-2 flex-1 justify-center bg-pastel-deep text-white shadow-md">
+                    <i class="fa-solid fa-child-reaching text-base"></i>
+                    Nursery School
+                </button>
+                <button onclick="switchTab('primary')" id="tab-primary" class="tab-btn px-5 py-3 rounded-xl font-bold text-sm transition-all flex items-center gap-2 flex-1 justify-center text-slate-600 hover:bg-slate-200/50">
+                    <i class="fa-solid fa-school text-base"></i>
+                    Primary School
+                </button>
+                <button onclick="switchTab('highschool')" id="tab-highschool" class="tab-btn px-5 py-3 rounded-xl font-bold text-sm transition-all flex items-center gap-2 flex-1 justify-center text-slate-600 hover:bg-slate-200/50">
+                    <i class="fa-solid fa-graduation-cap text-base"></i>
+                    High School
+                </button>
+            </div>
+        </div>
+
+        <!-- SECTION 1: NURSERY SCHOOL -->
+        <div id="sect-nursery" class="section-content grid grid-cols-1 lg:grid-cols-12 gap-8 items-center duration-300">
+            <!-- Left Side: 3-Photo Slideshow -->
+            <div class="lg:col-span-5 relative group" id="nursery-carousel">
+                <div class="bg-gradient-to-tr from-pastel-brand to-purple-400 rounded-3xl p-1 shadow-xl relative overflow-hidden h-[380px]">
+                    <div class="relative bg-white rounded-[20px] overflow-hidden h-full">
+                        <!-- Slide 1 -->
+                        <div class="nursery-slide slide absolute inset-0 opacity-100 pointer-events-auto" data-slide-index="0">
+                            <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&q=80&w=600" alt="Joyful Nursery Play" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                            <div class="absolute bottom-5 inset-x-0 px-5 text-white">
+                                <h4 class="font-bold text-lg">Joyful Learning Space</h4>
+                                <p class="text-xs text-slate-200">Stimulating setups that inspire creative play and focus.</p>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="nursery-slide slide absolute inset-0 opacity-0 pointer-events-none" data-slide-index="1">
+                            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=600" alt="Creative Development" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                            <div class="absolute bottom-5 inset-x-0 px-5 text-white">
+                                <h4 class="font-bold text-lg">Creative Play & Arts</h4>
+                                <p class="text-xs text-slate-200">Developing social and sensory competencies early.</p>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="nursery-slide slide absolute inset-0 opacity-0 pointer-events-none" data-slide-index="2">
+                            <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&q=80&w=600" alt="Nurturing Growth" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                            <div class="absolute bottom-5 inset-x-0 px-5 text-white">
+                                <h4 class="font-bold text-lg">Loving Environment</h4>
+                                <p class="text-xs text-slate-200">Ensuring every single child blossoms with pure confidence.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Nav Indicator Dots -->
+                        <div class="absolute bottom-4 inset-x-0 flex justify-center space-x-2 z-20">
+                            <button class="nursery-dot w-2 h-2 rounded-full bg-white transition-all scale-125" onclick="setNurserySlide(0)"></button>
+                            <button class="nursery-dot w-2 h-2 rounded-full bg-white/50 transition-all" onclick="setNurserySlide(1)"></button>
+                            <button class="nursery-dot w-2 h-2 rounded-full bg-white/50 transition-all" onclick="setNurserySlide(2)"></button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <p class="text-lg text-pastel-deep leading-relaxed font-medium italic">
-            "Today, with over 95% of our A-Level graduates successfully securing university placement annually, 
-            Crested has firmly established itself as a premier destination for academic success."
-            </p>            
+            <!-- Right Side: Text & Welcome Letter -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+                    <h3 class="text-xl font-bold text-pastel-deep">Welcome from the Headmistress</h3>
+                </div>
+                <p class="text-[15px] leading-relaxed text-pastel-slate">
+                    It is my pleasure to welcome you to Kings Way Nursery School, a joyful and nurturing environment where every child’s learning journey begins. At Kings Way, we believe that the early years are the foundation of lifelong learning, and we are committed to providing a safe, loving, and stimulating atmosphere in which every child can grow with confidence.
+                </p>
+                <p class="text-[15px] leading-relaxed text-pastel-slate">
+                    Our dedicated teachers guide children through play-based learning, discovery, and creativity helping them develop essential skills, values, and a love for learning. We focus on building not only strong academic readiness but also social, emotional, and moral growth, ensuring that each child blossoms into a well-rounded learner.
+                </p>
+                <p class="text-[15px] leading-relaxed text-pastel-slate">
+                    As you explore our website, we invite you to learn more about our programs, our values, and the caring community that makes Kings Way Nursery School a special place for young learners. Together with parents, we lay the foundation for a bright future.
+                </p>
+            </div>
+        </div>
 
-            <div class="mt-4">
-            <p class="text-pastel-brand italic font-semibold">
-                — Charles Ibingira
-            </p>
-            <p class="text-base text-[#C084FC] uppercase font-semibold mt-1">
-                Director
-            </p>
+        <!-- SECTION 2: PRIMARY SCHOOL (HIDDEN BY DEFAULT) -->
+        <div id="sect-primary" class="section-content grid grid-cols-1 lg:grid-cols-12 gap-8 items-center hidden duration-300">
+            <!-- Left Side: 3-Photo Slideshow -->
+            <div class="lg:col-span-5 relative group" id="primary-carousel">
+                <div class="bg-gradient-to-tr from-amber-300 to-pastel-brand rounded-3xl p-1 shadow-xl relative overflow-hidden h-[380px]">
+                    <div class="relative bg-white rounded-[20px] overflow-hidden h-full">
+                        <!-- Slide 1 -->
+                        <div class="primary-slide slide absolute inset-0 opacity-100 pointer-events-auto" data-slide-index="0">
+                            <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80&w=600" alt="Primary Classroom Learning" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                            <div class="absolute bottom-5 inset-x-0 px-5 text-white">
+                                <h4 class="font-bold text-lg">Academic Integrity</h4>
+                                <p class="text-xs text-slate-200">A strong, consistent legacy of primary school PLE success.</p>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="primary-slide slide absolute inset-0 opacity-0 pointer-events-none" data-slide-index="1">
+                            <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&q=80&w=600" alt="Advanced Computer Suites" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                            <div class="absolute bottom-5 inset-x-0 px-5 text-white">
+                                <h4 class="font-bold text-lg">Leading Practical IT Labs</h4>
+                                <p class="text-xs text-slate-200">Hands-on computing lessons for 21st century readiness.</p>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="primary-slide slide absolute inset-0 opacity-0 pointer-events-none" data-slide-index="2">
+                            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=600" alt="Holistic Education Activities" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                            <div class="absolute bottom-5 inset-x-0 px-5 text-white">
+                                <h4 class="font-bold text-lg">Co-curricular Development</h4>
+                                <p class="text-xs text-slate-200">Nurturing creative minds, athletic skills, and leadership.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Nav Indicator Dots -->
+                        <div class="absolute bottom-4 inset-x-0 flex justify-center space-x-2 z-20">
+                            <button class="primary-dot w-2 h-2 rounded-full bg-white transition-all scale-125" onclick="setPrimarySlide(0)"></button>
+                            <button class="primary-dot w-2 h-2 rounded-full bg-white/50 transition-all" onclick="setPrimarySlide(1)"></button>
+                            <button class="primary-dot w-2 h-2 rounded-full bg-white/50 transition-all" onclick="setPrimarySlide(2)"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Text & Welcome Letter -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+                    <h3 class="text-xl font-bold text-pastel-deep">Welcome from the Headteacher</h3>
+                </div>
+                <p class="text-[15px] leading-relaxed text-pastel-slate">
+                    On behalf of the entire Kings Way family, I warmly welcome you to our school website. At Kings Way Primary School, we are proud to be a center of learning that has nurtured young minds for 25 years of academic excellence.
+                </p>
+                <p class="text-[15px] leading-relaxed text-pastel-slate">
+                    Our mission is to provide holistic education—developing not only strong academic skills but also character, creativity, and confidence in every child. We believe that each learner is unique and has the potential to shine when guided with care, discipline, and encouragement. Over the years, Kings Way has built a legacy of success through dedicated teachers, supportive parents, and determined learners. Our consistent performance in academics, vibrant co-curricular activities, and commitment to values have made us a trusted choice for many families.
+                </p>
+                <p class="text-[15px] leading-relaxed text-pastel-slate">
+                    As you explore our website, I invite you to discover the opportunities, programs, and achievements that make Kings Way a home of excellence. Together, let us continue shaping the future, one child at a time.
+                </p>
+                <div class="pt-2 border-t border-slate-100 flex items-center justify-between">
+                    <div>
+                        <p class="text-amber-800 font-extrabold tracking-wide uppercase text-xs">With warm regards,</p>
+                        <p class="text-lg font-bold text-slate-800 mt-0.5">KIMERA AGGREY</p>
+                        <p class="text-xs font-semibold text-purple-600">Headmaster, Kings Way Primary School</p>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <!-- SECTION 3: HIGH SCHOOL (HIDDEN BY DEFAULT) -->
+        <div id="sect-highschool" class="section-content grid grid-cols-1 lg:grid-cols-12 gap-8 items-center hidden duration-300">
+            <!-- Left Side: Interactive Video Player Mockup -->
+            <div class="lg:col-span-5 relative">
+                <div class="bg-gradient-to-tr from-purple-500 to-indigo-600 rounded-3xl p-1 shadow-xl relative overflow-hidden h-[380px]">
+                    <div class="relative bg-black rounded-[20px] overflow-hidden h-full flex items-center justify-center group/video">
+                        
+                        <!-- Stock Education/Campus Video loops elegantly -->
+                        <video id="campus-video" class="w-full h-full object-cover opacity-80" loop muted playsinline poster="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=600">
+                            <source src="https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c054ba207eb0731551aa9b4d1b394d13&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
+                            Your browser does not support HTML5 videos.
+                        </video>
+
+                        <!-- Dark Overlays -->
+                        <div id="video-overlay" class="absolute inset-0 bg-black/40 flex flex-col justify-between p-5 transition-opacity duration-300">
+                            <span class="self-start text-[10px] font-bold tracking-widest text-emerald-400 bg-black/40 px-2.5 py-1 rounded-full uppercase backdrop-blur-sm">
+                                <i class="fa-solid fa-circle text-[8px] mr-1.5 animate-pulse"></i> Live Campus View
+                            </span>
+                            
+                            <!-- Large interactive play button -->
+                            <button onclick="toggleVideoPlayback()" class="self-center w-16 h-16 rounded-full bg-white/90 text-pastel-deep flex items-center justify-center shadow-lg transition-transform hover:scale-115 active:scale-95 focus:outline-none">
+                                <i id="play-icon" class="fa-solid fa-play text-2xl ml-1"></i>
+                            </button>
+
+                            <div class="text-white space-y-0.5">
+                                <h4 class="font-bold text-base">Kings Way High School Kitende</h4>
+                                <p class="text-xs text-slate-300">Experience our dynamic, holistic campus environment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Text & Welcome Letter -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <h3 class="text-xl font-bold text-pastel-deep">Secondary & Advanced Level Learning</h3>
+                </div>
+                <p class="text-[15px] leading-relaxed text-pastel-slate">
+                    Kings Way High School Kitende is a vibrant secondary school located in Kitende, Wakiso District, off Entebbe Road corridor. The school offers both day and boarding sections, with O'Level and A'Level while providing quality education to students from the surrounding communities as well as learners from different parts of the world.
+                </p>
+                <p class="text-[15px] leading-relaxed text-pastel-slate">
+                    We focus on our Vision to provide quality, holistic education that nurtures academic excellence, strong moral values, and responsible citizenship among our learners, blended with a mission to be leading center of secondary and advanced education that develops disciplined, knowledgeable, and innovative young people prepared to meet the challenges of the modern world.
+                </p>
+                
+                <!-- Quick Info badges for High School -->
+                <div class="grid grid-cols-2 gap-3 pt-3">
+                    <div class="p-3 bg-slate-50 border border-slate-100 rounded-xl flex items-center gap-3">
+                        <span class="text-indigo-600 bg-indigo-50 p-2.5 rounded-lg text-sm"><i class="fa-solid fa-book-open"></i></span>
+                        <div>
+                            <p class="text-xs text-slate-400 font-bold uppercase">Curriculum</p>
+                            <p class="text-sm font-bold text-slate-800">O & A Level Dual Track</p>
+                        </div>
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-100 rounded-xl flex items-center gap-3">
+                        <span class="text-amber-600 bg-amber-50 p-2.5 rounded-lg text-sm"><i class="fa-solid fa-location-dot"></i></span>
+                        <div>
+                            <p class="text-xs text-slate-400 font-bold uppercase">Location</p>
+                            <p class="text-sm font-bold text-slate-800">Kitende, Wakiso</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
     </div>
-</div>
-   
-        <!-- Paragraphs Section -->
-        <div class="lg:col-span-7 space-y-6">
-            <p class="text-pastel-slate">
-                Established in 1995 and fully registered with the Ministry of Education and Sports, Kings Way Schools serves as a premier examination center for both ‘O’ and ‘A’ Level candidates. Built upon a robust scientific foundation, the majority of our graduates successfully pursue competitive, science-based degrees—including Engineering, Medicine, and Computer Science—on both government and private sponsorship.
-            </p>
 
-            <p class="text-pastel-slate">
-                Situated away from the city's hustle and bustle, our campus provides a serene, dust-free learning environment. The school’s iconic main building stands prominently on the hillside, offering breathtaking views of Lake Victoria. Having celebrated 28 years of excellence, we have cultivated a unique culture defined by responsible mentorship, the enforcement of disciplined habits, and a commitment to always going the extra mile.
-            </p>
+    <script>
+        // Tab switching logic
+        function switchTab(targetSect) {
+            // Hide all sections
+            document.querySelectorAll('.section-content').forEach(section => {
+                section.classList.add('hidden');
+            });
 
-            <p class="text-pastel-slate">
-                By 2012, Crested was ranked among the top 19 best A-Level performing schools nationwide—a significant milestone in our history. 
+            // Deactivate all tab buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('bg-pastel-deep', 'text-white', 'shadow-md');
+                btn.classList.add('text-slate-600', 'hover:bg-slate-200/50');
+            });
 
+            // Show target section
+            document.getElementById(`sect-${targetSect}`).classList.remove('hidden');
+
+            // Activate corresponding tab button
+            const activeBtn = document.getElementById(`tab-${targetSect}`);
+            activeBtn.classList.remove('text-slate-600', 'hover:bg-slate-200/50');
+            activeBtn.classList.add('bg-pastel-deep', 'text-white', 'shadow-md');
+
+            // Pause high school video if switching away
+            if (targetSect !== 'highschool') {
+                const video = document.getElementById('campus-video');
+                const playIcon = document.getElementById('play-icon');
+                const overlay = document.getElementById('video-overlay');
+                if (video && !video.paused) {
+                    video.pause();
+                    playIcon.className = 'fa-solid fa-play text-2xl ml-1';
+                    overlay.classList.remove('opacity-0');
+                }
+            }
+        }
+
+        // Slideshow controls for Nursery Carousel
+        let nurseryIndex = 0;
+        let nurseryInterval;
+        const nurserySlides = document.querySelectorAll('.nursery-slide');
+        const nurseryDots = document.querySelectorAll('.nursery-dot');
+
+        function setNurserySlide(idx) {
+            nurseryIndex = idx;
+            nurserySlides.forEach((slide, i) => {
+                if (i === idx) {
+                    slide.classList.replace('opacity-0', 'opacity-100');
+                    slide.classList.replace('pointer-events-none', 'pointer-events-auto');
+                    nurseryDots[i].classList.add('bg-white', 'scale-125');
+                    nurseryDots[i].classList.remove('bg-white/50');
+                } else {
+                    slide.classList.replace('opacity-100', 'opacity-0');
+                    slide.classList.replace('pointer-events-auto', 'pointer-events-none');
+                    nurseryDots[i].classList.remove('bg-white', 'scale-125');
+                    nurseryDots[i].classList.add('bg-white/50');
+                }
+            });
+        }
+
+        function autoplayNursery() {
+            nurseryIndex = (nurseryIndex + 1) % nurserySlides.length;
+            setNurserySlide(nurseryIndex);
+        }
+
+        // Slideshow controls for Primary Carousel
+        let primaryIndex = 0;
+        let primaryInterval;
+        const primarySlides = document.querySelectorAll('.primary-slide');
+        const primaryDots = document.querySelectorAll('.primary-dot');
+
+        function setPrimarySlide(idx) {
+            primaryIndex = idx;
+            primarySlides.forEach((slide, i) => {
+                if (i === idx) {
+                    slide.classList.replace('opacity-0', 'opacity-100');
+                    slide.classList.replace('pointer-events-none', 'pointer-events-auto');
+                    primaryDots[i].classList.add('bg-white', 'scale-125');
+                    primaryDots[i].classList.remove('bg-white/50');
+                } else {
+                    slide.classList.replace('opacity-100', 'opacity-0');
+                    slide.classList.replace('pointer-events-auto', 'pointer-events-none');
+                    primaryDots[i].classList.remove('bg-white', 'scale-125');
+                    primaryDots[i].classList.add('bg-white/50');
+                }
+            });
+        }
+
+        function autoplayPrimary() {
+            primaryIndex = (primaryIndex + 1) % primarySlides.length;
+            setPrimarySlide(primaryIndex);
+        }
+
+        // Interactive High School Video playback controls
+        function toggleVideoPlayback() {
+            const video = document.getElementById('campus-video');
+            const playIcon = document.getElementById('play-icon');
+            const overlay = document.getElementById('video-overlay');
+
+            if (video.paused) {
+                video.play();
+                playIcon.className = 'fa-solid fa-pause text-2xl';
+                overlay.classList.add('opacity-0');
+            } else {
+                video.pause();
+                playIcon.className = 'fa-solid fa-play text-2xl ml-1';
+                overlay.classList.remove('opacity-0');
+            }
+        }
+
+        // Initialize autoplays on document load
+        document.addEventListener('DOMContentLoaded', () => {
+            nurseryInterval = setInterval(autoplayNursery, 5000);
+            primaryInterval = setInterval(autoplayPrimary, 5000);
+
+            // Pause carousels on mouseover to enhance user accessibility
+            const nurseryContainer = document.getElementById('nursery-carousel');
+            nurseryContainer.addEventListener('mouseenter', () => clearInterval(nurseryInterval));
+            nurseryContainer.addEventListener('mouseleave', () => nurseryInterval = setInterval(autoplayNursery, 5000));
+
+            const primaryContainer = document.getElementById('primary-carousel');
+            primaryContainer.addEventListener('mouseenter', () => clearInterval(primaryInterval));
+            primaryContainer.addEventListener('mouseleave', () => primaryInterval = setInterval(autoplayPrimary, 5000));
+
+            // Setup overlay click to reveal controls if playing
+            const overlay = document.getElementById('video-overlay');
+            const video = document.getElementById('campus-video');
+            video.addEventListener('click', () => {
+                if (!video.paused) {
+                    video.pause();
+                    document.getElementById('play-icon').className = 'fa-solid fa-play text-2xl ml-1';
+                    overlay.classList.remove('opacity-0');
+                }
+            });
+        });
+    </script>
             <!-- Features Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                 <div class="flex items-center space-x-2 text-pastel-deep font-semibold">
