@@ -396,15 +396,20 @@
 <section id="about" class="max-w-6xl w-full mx-auto bg-white backdrop-blur-md border border-amber-100 rounded-3xl p-6 md:p-8 shadow-xl space-y-8">        
         <!-- Header Controls / Navigation Tabs -->
         <div class="flex flex-col items-center text-center space-y-4">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-[#FEF2D3] text-amber-900 uppercase tracking-wider">
-                Explore our Departments
-            </span>
-            <h2 class="text-3xl font-extrabold text-slate-900">Choose a Learning Stage</h2>
+     <!-- STANDALONE TITLES -->
+    <div class="mb-12 text-center lg:text-left">
+        <h1 class="text-pastel-brand font-bold text-3xl mb-2 text-center">
+            About Us
+        </h1>
+        <h2 class="font-sans text-2xl sm:text-3xl font-bold text-[#C084FC] text-center">
+            Welcome to Crested Secondary School Kampala
+        </h2>
+    </div>
             <p class="text-sm text-pastel-slate max-w-lg">Click the buttons below to switch sections and discover our tailored programs, campus views, and welcome letters.</p>
             
             <!-- Tab Button Row -->
             <div class="flex flex-wrap justify-center gap-3 p-1.5 bg-slate-100/80 rounded-2xl w-full max-w-2xl mt-4 border border-slate-200">
-                <button onclick="switchTab('nursery')" id="tab-nursery" class="tab-btn px-5 py-3 rounded-xl font-bold text-sm transition-all flex items-center gap-2 flex-1 justify-center bg-pastel-deep text-white shadow-md">
+                <button onclick="switchTab('nursery')" id="tab-nursery" class="tab-btn px-5 py-3 rounded-xl font-bold text-sm transition-all flex items-center gap-2 flex-1 justify-center bg-pastel-sky text-white shadow-md">
                     <i class="fa-solid fa-child-reaching text-base"></i>
                     Nursery School
                 </button>
