@@ -198,7 +198,8 @@
         </div>
 
         <!-- RIGHT HAND FACT SHEET (span 5 - Perfectly Adjacent) -->
-        <!-- Right Side: The 5-Photo Image Carousel Component (This is the direct replacement for your lg:col-span-5 div) -->
+        
+        <!-- Right Side: The 5-Photo Image Carousel Component -->
         <div class="lg:col-span-5 relative group" id="carousel-container">
             <!-- Outermost gradient-border card container -->
             <div class="bg-gradient-to-tr from-pastel-brand to-purple-400 rounded-3xl p-1.5 shadow-2xl relative overflow-hidden transition-all duration-500 hover:shadow-purple-200/50">
@@ -215,9 +216,9 @@
                              class="w-full h-full object-cover scale-100 transition-transform duration-[5000ms] ease-out group-hover:scale-105"
                              onerror="this.src='https://placehold.co/800x600/C084FC/ffffff?text=Kings+Way+Schools+Campus'">
                         <!-- Soft dark vignette overlay for legibility -->
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
                         <!-- Caption details -->
-                        <div class="absolute bottom-0 inset-x-0 p-6 text-white space-y-1">
+                        <div class="absolute bottom-10 inset-x-0 p-6 text-white space-y-1 z-10">
                             <span class="text-[10px] font-bold tracking-widest text-pastel-brand uppercase bg-black/40 px-2 py-0.5 rounded-md backdrop-blur-sm">Est. 2001</span>
                             <h3 class="text-xl font-bold">State-of-the-Art Seguku Campus</h3>
                             <p class="text-sm text-slate-200">A nurturing, serene, and secure learning environment for both day & boarding scholars.</p>
@@ -230,8 +231,8 @@
                              alt="Computing and Technology Suites" 
                              class="w-full h-full object-cover"
                              onerror="this.src='https://placehold.co/800x600/C084FC/ffffff?text=Modern+IT+Suites'">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
-                        <div class="absolute bottom-0 inset-x-0 p-6 text-white space-y-1">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+                        <div class="absolute bottom-10 inset-x-0 p-6 text-white space-y-1 z-10">
                             <span class="text-[10px] font-bold tracking-widest text-emerald-400 uppercase bg-black/40 px-2 py-0.5 rounded-md backdrop-blur-sm">Digital Innovation</span>
                             <h3 class="text-xl font-bold">Leading-Edge Computer Centers</h3>
                             <p class="text-sm text-slate-200">Equipping tomorrow’s leaders with vital 21st-century technology competencies.</p>
@@ -244,8 +245,8 @@
                              alt="Classroom Instruction" 
                              class="w-full h-full object-cover"
                              onerror="this.src='https://placehold.co/800x600/C084FC/ffffff?text=Rigorous+Curriculum'">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
-                        <div class="absolute bottom-0 inset-x-0 p-6 text-white space-y-1">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+                        <div class="absolute bottom-10 inset-x-0 p-6 text-white space-y-1 z-10">
                             <span class="text-[10px] font-bold tracking-widest text-amber-400 uppercase bg-black/40 px-2 py-0.5 rounded-md backdrop-blur-sm">Academic Rigor</span>
                             <h3 class="text-xl font-bold">Rigorous National Curriculum</h3>
                             <p class="text-sm text-slate-200">Excellent teaching staff focused on unlocking your child's highest potential.</p>
@@ -258,8 +259,8 @@
                              alt="Science Laboratories" 
                              class="w-full h-full object-cover"
                              onerror="this.src='https://placehold.co/800x600/C084FC/ffffff?text=Practical+Science+Labs'">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
-                        <div class="absolute bottom-0 inset-x-0 p-6 text-white space-y-1">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+                        <div class="absolute bottom-10 inset-x-0 p-6 text-white space-y-1 z-10">
                             <span class="text-[10px] font-bold tracking-widest text-cyan-400 uppercase bg-black/40 px-2 py-0.5 rounded-md backdrop-blur-sm">Practical Learning</span>
                             <h3 class="text-xl font-bold">Advanced Science Laboratories</h3>
                             <p class="text-sm text-slate-200">Interactive physics, chemistry, and biology setups for experiential mastery.</p>
@@ -272,33 +273,22 @@
                              alt="Moral and Character Growth" 
                              class="w-full h-full object-cover"
                              onerror="this.src='https://placehold.co/800x600/C084FC/ffffff?text=Moral+and+Spiritual+Anchor'">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
-                        <div class="absolute bottom-0 inset-x-0 p-6 text-white space-y-1">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+                        <div class="absolute bottom-10 inset-x-0 p-6 text-white space-y-1 z-10">
                             <span class="text-[10px] font-bold tracking-widest text-purple-300 uppercase bg-black/40 px-2 py-0.5 rounded-md backdrop-blur-sm">Spiritual Anchor</span>
                             <h3 class="text-xl font-bold">Moral & Spiritual Foundation</h3>
                             <p class="text-sm text-slate-200">Nurturing faith, empathy, respect, and character with strong Christian anchors.</p>
                         </div>
                     </div>
 
-                    <!-- Manual Navigation Arrow Buttons (Hidden on mobile, reveals on desktop hover) -->
-                    <button id="prevBtn" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/20 hover:bg-white/45 text-white flex items-center justify-center backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-auto z-20" aria-label="Previous Slide">
-                        <i class="fa-solid fa-chevron-left"></i>
-                    </button>
-                    <button id="nextBtn" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/20 hover:bg-white/45 text-white flex items-center justify-center backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-auto z-20" aria-label="Next Slide">
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </button>
-
-                    <!-- Bottom Indicator Dots and Progress Trackers -->
-                    <div class="absolute bottom-20 inset-x-0 flex justify-center space-x-2 z-20 pointer-events-auto">
+                    <!-- Bottom Indicator Dots (Moved to bottom-4 to prevent text overlap, and kept round) -->
+                    <div class="absolute bottom-4 inset-x-0 flex justify-center space-x-2.5 z-20 pointer-events-auto">
                         <button class="indicator-dot w-2 h-2 rounded-full bg-white/50 transition-all duration-300 hover:bg-white" data-slide="0" aria-label="Go to Slide 1"></button>
                         <button class="indicator-dot w-2 h-2 rounded-full bg-white/50 transition-all duration-300 hover:bg-white" data-slide="1" aria-label="Go to Slide 2"></button>
                         <button class="indicator-dot w-2 h-2 rounded-full bg-white/50 transition-all duration-300 hover:bg-white" data-slide="2" aria-label="Go to Slide 3"></button>
                         <button class="indicator-dot w-2 h-2 rounded-full bg-white/50 transition-all duration-300 hover:bg-white" data-slide="3" aria-label="Go to Slide 4"></button>
                         <button class="indicator-dot w-2 h-2 rounded-full bg-white/50 transition-all duration-300 hover:bg-white" data-slide="4" aria-label="Go to Slide 5"></button>
                     </div>
-
-                    <!-- Modern visual progress bar indicating autoplay time remaining -->
-                    <div class="absolute bottom-0 left-0 h-1.5 bg-gradient-to-r from-pastel-brand to-purple-500 z-30" id="progressBar"></div>
                 </div>
             </div>
         </div>
@@ -308,18 +298,14 @@
         document.addEventListener('DOMContentLoaded', () => {
             const slides = document.querySelectorAll('.slide');
             const dots = document.querySelectorAll('.indicator-dot');
-            const prevBtn = document.getElementById('prevBtn');
-            const nextBtn = document.getElementById('nextBtn');
-            const progressBar = document.getElementById('progressBar');
             const carouselContainer = document.getElementById('carousel-container');
 
             let currentSlideIndex = 0;
             const slideDuration = 5000; // 5 seconds per slide
             let slideInterval;
 
-            // Update visible slide and indicator dots
+            // Update visible slide and indicator dots safely without line stretching
             function updateSlides(newIndex) {
-                // Ensure wraps
                 if (newIndex < 0) {
                     currentSlideIndex = slides.length - 1;
                 } else if (newIndex >= slides.length) {
@@ -328,7 +314,7 @@
                     currentSlideIndex = newIndex;
                 }
 
-                // Smoothly fade-out previous slides and fade-in current active
+                // Smoothly cross-fade slides
                 slides.forEach((slide, i) => {
                     if (i === currentSlideIndex) {
                         slide.classList.replace('opacity-0', 'opacity-100');
@@ -339,22 +325,16 @@
                     }
                 });
 
-                // Update styling of dots
+                // Update styling of dots (remains circular, avoids looking like lines)
                 dots.forEach((dot, i) => {
                     if (i === currentSlideIndex) {
-                        dot.classList.add('bg-white', 'w-6');
-                        dot.classList.remove('bg-white/50', 'w-2');
+                        dot.classList.add('bg-white', 'scale-125');
+                        dot.classList.remove('bg-white/50', 'scale-100');
                     } else {
-                        dot.classList.remove('bg-white', 'w-6');
-                        dot.classList.add('bg-white/50', 'w-2');
+                        dot.classList.remove('bg-white', 'scale-125');
+                        dot.classList.add('bg-white/50', 'scale-100');
                     }
                 });
-
-                // Reset and restart the CSS visual progress bar animation
-                progressBar.classList.remove('progress-bar-active');
-                // Trigger reflow to restart the animation
-                void progressBar.offsetWidth; 
-                progressBar.classList.add('progress-bar-active');
             }
 
             // Carousel Autoplay functions
@@ -363,26 +343,11 @@
                 slideInterval = setInterval(() => {
                     updateSlides(currentSlideIndex + 1);
                 }, slideDuration);
-                progressBar.classList.add('progress-bar-active');
             }
 
             function stopAutoplay() {
                 clearInterval(slideInterval);
-                progressBar.classList.remove('progress-bar-active');
             }
-
-            // Click Handlers
-            nextBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                updateSlides(currentSlideIndex + 1);
-                startAutoplay(); // Reset timer on manual click
-            });
-
-            prevBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                updateSlides(currentSlideIndex - 1);
-                startAutoplay(); // Reset timer on manual click
-            });
 
             dots.forEach((dot) => {
                 dot.addEventListener('click', () => {
@@ -392,7 +357,7 @@
                 });
             });
 
-            // Accessibility & Touch swipe gestures for mobile
+            // Touch swipe gestures for mobile devices
             let touchStartX = 0;
             let touchEndX = 0;
             
@@ -410,19 +375,17 @@
             function handleSwipeGesture() {
                 const threshold = 50; // min swipe distance in px
                 if (touchStartX - touchEndX > threshold) {
-                    // Swiped Left -> Show next
                     updateSlides(currentSlideIndex + 1);
                 } else if (touchEndX - touchStartX > threshold) {
-                    // Swiped Right -> Show prev
                     updateSlides(currentSlideIndex - 1);
                 }
             }
 
-            // Pause autoplay when hovering desktop site
+            // Pause autoplay when hovering over desktop site
             carouselContainer.addEventListener('mouseenter', stopAutoplay);
             carouselContainer.addEventListener('mouseleave', startAutoplay);
 
-            // Initializer
+            // Initialize carousel layout state
             updateSlides(0);
             startAutoplay();
         });
