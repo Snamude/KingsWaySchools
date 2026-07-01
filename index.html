@@ -1543,15 +1543,15 @@ window.addEventListener('scroll', function() {
 
             const buttons = document.querySelectorAll('.academic-tab-btn');
             buttons.forEach(btn => {
-                btn.classList.remove('bg-[#fffdf0]', 'text-white', 'active');
-                btn.classList.add('bg-white', 'text-pastel-deep', 'hover:bg-[#fffdf0]');
+                btn.classList.remove('bg-pastel-sky', 'text-white', 'active');
+                btn.classList.add('bg-white', 'text-pastel-deep', 'hover:bg-pastel-glacier');
             });
 
             document.getElementById('tab-' + tabName).classList.remove('hidden');
 
             const activeButton = document.getElementById('btn-' + tabName);
-            activeButton.classList.remove('bg-white', 'text-pastel-deep', 'hover:bg-[#fffdf0]');
-            activeButton.classList.add('bg-[#fffdf0]', 'text-white', 'active');
+            activeButton.classList.remove('bg-white', 'text-pastel-deep', 'hover:bg-pastel-glacier');
+            activeButton.classList.add('bg-pastel-sky', 'text-white', 'active');
         }
 
    
