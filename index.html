@@ -545,8 +545,9 @@
     </div> 
  
     <script>
-        // Tab switching logic
-        function switchTab(targetSect) {
+        
+        // Tab switching logic 
+function switchTab(targetSect) {
     // Hide all sections
     document.querySelectorAll('.section-content').forEach(section => {
         section.classList.add('hidden');
@@ -554,9 +555,11 @@
 
     // Deactivate all tab buttons cleanly
     document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.classList.remove('active', 'bg-pastel-deep', 'shadow-md');
-        // Add the unselected styling: background white, blue text
-        btn.classList.add('bg-white', 'bg-pastel-deep', 'hover:bg-slate-50'); 
+        // 1. Remove all active states (including active background and white text)
+        btn.classList.remove('active', 'bg-pastel-deep', 'text-white', 'shadow-md');
+        
+        // 2. Apply inactive states: white background, deep text, and hover effects
+        btn.classList.add('bg-white', 'text-pastel-deep', 'hover:bg-slate-50'); 
     });
 
     // Show target section
@@ -566,11 +569,25 @@
     // Activate corresponding tab button
     const activeBtn = document.getElementById(`tab-${targetSect}`);
     if (activeBtn) {
-        // Remove unselected background/text color
-        activeBtn.classList.remove('bg-white', 'text-pastel-sky', 'hover:bg-slate-50');
-        // Force the active color state cleanly
-        activeBtn.classList.add('bg-pastel-deep', 'text-pastel-deep', 'shadow-md', 'active');
+        // 3. Remove inactive states from the clicked button so they don't conflict
+        activeBtn.classList.remove('bg-white', 'text-pastel-deep', 'hover:bg-slate-50');
+        
+        // 4. Force active states: deep background, white text for readability, shadow, and active tag
+        activeBtn.classList.add('bg-pastel-deep', 'text-white', 'shadow-md', 'active');
     }
+
+    // Pause high school video if switching away
+    if (targetSect !== 'highschool') {
+        const video = document.getElementById('campus-video');
+        const playIcon = document.getElementById('play-icon');
+        const overlay = document.getElementById('video-overlay');
+        if (video && !video.paused) {
+            video.pause();
+            playIcon.className = 'fa-solid fa-play text-2xl ml-1';
+            overlay.classList.remove('opacity-0');
+        }
+    }
+}
 
     // Pause high school video if switching away
     if (targetSect !== 'highschool') {
