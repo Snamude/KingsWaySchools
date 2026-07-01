@@ -207,42 +207,42 @@
                 <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
                 
                 <!-- Main Inner Body: Carousel & Overlays (Fixed high aspect ratio container) -->
-                <div class="relative bg-white rounded-[22px] overflow-hidden h-[420px] z-10">
-                    
-                    <!-- Slide 1: Welcome / Main Campus -->
-                    <div class="slide absolute inset-0 opacity-100 pointer-events-auto" data-slide-index="0">
-                        <img src="images/Home_Slide1.jpg" 
-                             alt="Kings Way Schools Campus" 
-                             class="w-full h-full object-cover scale-100 transition-transform duration-[5000ms] ease-out group-hover:scale-105">
-                        </div>
+             <div class="relative bg-white rounded-[22px] overflow-hidden h-[420px] z-10">
+    <!-- Slide 1: Welcome / Main Campus --> 
+    <div class="slide absolute inset-0 opacity-100 pointer-events-auto" data-slide-index="0">
+        <!-- Replaced object-cover with object-fill to prevent cropping and fill the box completely -->
+        <img src="images/Home_Slide1.jpg" 
+             alt="Kings Way Schools Campus" 
+             class="w-full h-full object-fill scale-100 transition-transform duration-[5000ms] ease-out group-hover:scale-105">
+    </div>
+    <!-- Slide 2: Science & IT Labs --> 
+    <div class="slide absolute inset-0 opacity-0 pointer-events-none" data-slide-index="1">
+        <img src="images/Home_Slide2.jpg" 
+             alt="Computing and Technology Suites" 
+             class="w-full h-full object-fill"> 
+    </div> 
+    <!-- Slide 3: Classroom Learning -->
+    <div class="slide absolute inset-0 opacity-0 pointer-events-none" data-slide-index="2">
+        <img src="images/Home_Slide3.jpg" 
+             alt="Classroom Instruction" 
+             class="w-full h-full object-fill">
+    </div>
+    <!-- Slide 4: Science Labs & Experiments --> 
+    <div class="slide absolute inset-0 opacity-0 pointer-events-none" data-slide-index="3">
+        <img src="images/Home_Slide4.jpg" 
+             alt="Science Laboratories" 
+             class="w-full h-full object-fill">
+    </div> 
+    <!-- Slide 5: Spiritual/Values & Sports -->
+    <div class="slide absolute inset-0 opacity-0 pointer-events-none" data-slide-index="4">
+        <img src="images/Home_Slide5.jpg" 
+             alt="Moral and Character Growth" 
+             class="w-full h-full object-fill"> 
+    </div>
+</div>
 
-                    <!-- Slide 2: Science & IT Labs -->
-                    <div class="slide absolute inset-0 opacity-0 pointer-events-none" data-slide-index="1">
-                        <img src="images/Home_Slide2.jpg" 
-                             alt="Computing and Technology Suites" 
-                             class="w-full h-full object-cover"> 
-                    </div>
-
-                    <!-- Slide 3: Classroom Learning -->
-                    <div class="slide absolute inset-0 opacity-0 pointer-events-none" data-slide-index="2">
-                        <img src="images/Home_Slide3.jpg" 
-                             alt="Classroom Instruction" 
-                             class="w-full h-full object-cover">
-                    </div>
-
-                    <!-- Slide 4: Science Labs & Experiments -->
-                    <div class="slide absolute inset-0 opacity-0 pointer-events-none" data-slide-index="3">
-                        <img src="images/Home_Slide4.jpg" 
-                             alt="Science Laboratories" 
-                             class="w-full h-full object-cover">
-                    </div>
-
-                    <!-- Slide 5: Spiritual/Values & Sports -->
-                    <div class="slide absolute inset-0 opacity-0 pointer-events-none" data-slide-index="4">
-                        <img src="images/Home_Slide5.jpg" 
-                             alt="Moral and Character Growth" 
-                             class="w-full h-full object-cover"> 
-                    </div>
+### Pro-Tip for Best Visuals
+Using `object-fill` is the correct technical answer to satisfy all constraint conditions. However, to keep your images from looking distorted (stretched or squished), you should **physically crop your raw image files** (e.g., `Home_Slide1.jpg`, `Home_Slide2.jpg`, etc.) using an image editor to match the exact dimensions of your `h-[420px]` container before uploading them to your server. This ensures they look naturally proportioned and fit perfectly!
 
                     <!-- Bottom Indicator Dots (Moved to bottom-4 to prevent text overlap, and kept round) -->
                     <div class="absolute bottom-4 inset-x-0 flex justify-center space-x-2.5 z-20 pointer-events-auto">
