@@ -431,9 +431,7 @@
 
             <!-- Right Side: Text & Welcome Letter -->
             <div class="lg:col-span-7 space-y-6">
-                <div class="flex items-center gap-2">
-                    <h3 class="text-xl font-bold text-pastel-deep">Welcome from the Headmistress</h3>
-                </div>
+                
                 <p class="text-[15px] leading-relaxed text-pastel-slate">
                     It is my pleasure to welcome you to Kings Way Nursery School, a joyful and nurturing environment where every child’s learning journey begins. At Kings Way, we believe that the early years are the foundation of lifelong learning, and we are committed to providing a safe, loving, and stimulating atmosphere in which every child can grow with confidence.
                 </p>
@@ -559,8 +557,8 @@
 
             // Deactivate all tab buttons
             document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('bg-pastel-deep', 'text-white', 'shadow-md', 'active');
-                btn.classList.add('text-white', 'hover:bg-pastel-deep');
+                btn.classList.remove('bg-pastel-deep', 'text-white', 'active');
+                btn.classList.add('bg-white', 'text-pastel-deep', 'hover:bg-pastel-deep');
             });
 
             // Show target section
