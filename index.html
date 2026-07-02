@@ -386,33 +386,35 @@
         </div>
 <!-- SECTION 1: NURSERY SCHOOL -->
 <div id="sect-nursery" class="section-content grid grid-cols-1 lg:grid-cols-12 gap-8 items-center duration-300">
-    <!-- Left Side: 5-Photo Slideshow -->
+    <!-- Left Side: 4-Photo Slideshow -->
     <div class="lg:col-span-5 relative group" id="nursery-carousel">
-        <div class="bg-gradient-to-tr from-pastel-brand to-purple-400 rounded-3xl p-1 shadow-xl relative overflow-hidden h-[380px]">
+        <!-- Removed background gradient class to stop color from flashing on load -->
+        <div class="rounded-3xl p-1 shadow-xl relative overflow-hidden h-[380px]">
             <div class="relative rounded-[20px] overflow-hidden h-full">
                 
-                <!-- Slide 1 -->
-                <div class="nursery-slide slide absolute inset-0 opacity-0 pointer-events-none" data-slide-index="3">
+                <!-- Slide 1 (Set to visible instantly on load) -->
+                <div class="nursery-slide slide absolute inset-0 opacity-100 pointer-events-auto" data-slide-index="0">
                     <img src="images/Home_Slide4.jpg" 
                          alt="Science Laboratories" 
                          class="w-full h-full object-cover">
                 </div> 
 
                 <!-- Slide 2 -->
-             <div class="nursery-slide slide absolute inset-0 opacity-0 pointer-events-none" data-slide-index="4">
+                <div class="nursery-slide slide absolute inset-0 opacity-0 pointer-events-none" data-slide-index="1">
                     <img src="images/Home_Slide5.jpg" 
                          alt="Moral and Character Growth" 
                          class="w-full h-full object-cover"> 
                 </div>
+
                 <!-- Slide 3 --> 
-                  <div class="nursery-slide slide absolute inset-0 opacity-0 pointer-events-none" data-slide-index="4">
+                <div class="nursery-slide slide absolute inset-0 opacity-0 pointer-events-none" data-slide-index="2">
                     <img src="images/KWS_Nursery3.jpg" 
                          alt="Moral and Character Growth" 
                          class="w-full h-full object-cover"> 
                 </div>
               
                 <!-- Slide 4 -->
-               <div class="nursery-slide slide absolute inset-0 opacity-0 pointer-events-none" data-slide-index="4">
+                <div class="nursery-slide slide absolute inset-0 opacity-0 pointer-events-none" data-slide-index="3">
                     <img src="images/KWS_Nursery4.jpg" 
                          alt="Moral and Character Growth" 
                          class="w-full h-full object-cover"> 
