@@ -198,162 +198,160 @@
             </div>
         </div>
 
-         
-        <!-- Right Side: The 5-Photo Image Carousel Component -->
-        <div class="lg:col-span-5 relative group" id="carousel-container">
-            <!-- Outermost gradient-border card container -->
-            <div class="bg-gradient-to-tr from-[#D59F28] to-[#D59F28] rounded-3xl p-1.5 shadow-2xl relative overflow-hidden transition-all duration-500 hover:shadow-purple-200/50">
-                <!-- Tiny background pattern decoration -->
-                <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
-                
-                <!-- Main Inner Body: Carousel & Overlays (Fixed high aspect ratio container) -->
-             
+ <!-- Right Side: The 6-Photo Image Carousel Component -->
+<div class="lg:col-span-5 relative group" id="carousel-container">
+    <!-- Outermost gradient-border card container -->
+    <div class="bg-gradient-to-tr from-[#D59F28] to-[#D59F28] rounded-3xl p-1.5 shadow-2xl relative overflow-hidden transition-all duration-500 hover:shadow-purple-200/50">
+        <!-- Tiny background pattern decoration -->
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
+        <!-- Main Inner Body: Carousel & Overlays (Fixed high aspect ratio container) -->
+        <div class="relative bg-white rounded-[22px] overflow-hidden h-[420px] z-10">                   
+            
+            <!-- Slide 0: Computer Lab (The new one you added) -->
+            <div class="slide absolute inset-0 opacity-100 pointer-events-auto" data-slide-index="0">
+                <img src="images/KWS_students_computerlab.jpg" 
+                     alt="Kings Way Schools Computer Lab" 
+                     class="w-full h-full object-cover scale-100 transition-transform duration-[5000ms] ease-out group-hover:scale-105">
+            </div>
+            
+            <!-- Slide 1 -->
+            <div class="slide absolute inset-0 opacity-0 pointer-events-none" data-slide-index="1">
+                <img src="images/Home_Slide1.jpg" 
+                     alt="Kings Way Schools Campus" 
+                     class="w-full h-full object-cover scale-100 transition-transform duration-[5000ms] ease-out group-hover:scale-105">
+            </div>
 
-  <div class="relative bg-white rounded-[22px] overflow-hidden h-[420px] z-10">
-    <div class="slide absolute inset-0 opacity-100 pointer-events-auto" data-slide-index="0">
-        <img src="images/KWS_students_computerlab.jpg" 
-             alt="Kings Way Schools Campus" 
-             class="w-full h-full object-cover scale-100 transition-transform duration-[5000ms] ease-out group-hover:scale-105">
-    </div>
+            <!-- Slide 2 -->
+            <div class="slide absolute inset-0 opacity-0 pointer-events-none" data-slide-index="2">
+                <img src="images/Home_Slide2.jpg" 
+                     alt="Computing and Technology Suites" 
+                     class="w-full h-full object-cover"> 
+            </div> 
 
- <div class="relative bg-white rounded-[22px] overflow-hidden h-[420px] z-10">
-    <div class="slide absolute inset-0 opacity-100 pointer-events-auto" data-slide-index="0">
-        <img src="images/Home_Slide1.jpg" 
-             alt="Kings Way Schools Campus" 
-             class="w-full h-full object-cover scale-100 transition-transform duration-[5000ms] ease-out group-hover:scale-105">
-    </div>
-    <div class="slide absolute inset-0 opacity-0 pointer-events-none" data-slide-index="1">
-        <img src="images/Home_Slide2.jpg" 
-             alt="Computing and Technology Suites" 
-             class="w-full h-full object-cover"> 
-    </div> 
-    <div class="slide absolute inset-0 opacity-0 pointer-events-none" data-slide-index="2">
-        <img src="images/Home_Slide3.jpg" 
-             alt="Classroom Instruction" 
-             class="w-full h-full object-cover">
-    </div>
-    <div class="slide absolute inset-0 opacity-0 pointer-events-none" data-slide-index="3">
-        <img src="images/Home_Slide4.jpg" 
-             alt="Science Laboratories" 
-             class="w-full h-full object-cover">
-    </div> 
-    <div class="slide absolute inset-0 opacity-0 pointer-events-none" data-slide-index="4">
-        <img src="images/Home_Slide5.jpg" 
-             alt="Moral and Character Growth" 
-             class="w-full h-full object-cover"> 
-    </div>
-</div>
- 
-                    <!-- Bottom Indicator Dots (Moved to bottom-4 to prevent text overlap, and kept round) -->
-                    <div class="absolute bottom-4 inset-x-0 flex justify-center space-x-2.5 z-20 pointer-events-auto">
-                        <button class="indicator-dot w-2 h-2 rounded-full bg-white/50 transition-all duration-300 hover:bg-white" data-slide="0" aria-label="Go to Slide 1"></button>
-                        <button class="indicator-dot w-2 h-2 rounded-full bg-white/50 transition-all duration-300 hover:bg-white" data-slide="1" aria-label="Go to Slide 2"></button>
-                        <button class="indicator-dot w-2 h-2 rounded-full bg-white/50 transition-all duration-300 hover:bg-white" data-slide="2" aria-label="Go to Slide 3"></button>
-                        <button class="indicator-dot w-2 h-2 rounded-full bg-white/50 transition-all duration-300 hover:bg-white" data-slide="3" aria-label="Go to Slide 4"></button>
-                        <button class="indicator-dot w-2 h-2 rounded-full bg-white/50 transition-all duration-300 hover:bg-white" data-slide="4" aria-label="Go to Slide 5"></button>
-                        <button class="indicator-dot w-2 h-2 rounded-full bg-white/50 transition-all duration-300 hover:bg-white" data-slide="4" aria-label="Go to Slide 6"></button>
-                    </div>
-                </div>
+            <!-- Slide 3 -->
+            <div class="slide absolute inset-0 opacity-0 pointer-events-none" data-slide-index="3">
+                <img src="images/Home_Slide3.jpg" 
+                     alt="Classroom Instruction" 
+                     class="w-full h-full object-cover">
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slide absolute inset-0 opacity-0 pointer-events-none" data-slide-index="4">
+                <img src="images/Home_Slide4.jpg" 
+                     alt="Science Laboratories" 
+                     class="w-full h-full object-cover">
+            </div> 
+
+            <!-- Slide 5 -->
+            <div class="slide absolute inset-0 opacity-0 pointer-events-none" data-slide-index="5">
+                <img src="images/Home_Slide5.jpg" 
+                     alt="Moral and Character Growth" 
+                     class="w-full h-full object-cover"> 
+            </div>
+
+            <!-- Bottom Indicator Dots (Cleaned up to match 6 items exactly, ordered 0 to 5) -->
+            <div class="absolute bottom-4 inset-x-0 flex justify-center space-x-2.5 z-20 pointer-events-auto">
+                <button class="indicator-dot w-2 h-2 rounded-full bg-white/50 transition-all duration-300 hover:bg-white" data-slide="0" aria-label="Go to Slide 1"></button>
+                <button class="indicator-dot w-2 h-2 rounded-full bg-white/50 transition-all duration-300 hover:bg-white" data-slide="1" aria-label="Go to Slide 2"></button>
+                <button class="indicator-dot w-2 h-2 rounded-full bg-white/50 transition-all duration-300 hover:bg-white" data-slide="2" aria-label="Go to Slide 3"></button>
+                <button class="indicator-dot w-2 h-2 rounded-full bg-white/50 transition-all duration-300 hover:bg-white" data-slide="3" aria-label="Go to Slide 4"></button>
+                <button class="indicator-dot w-2 h-2 rounded-full bg-white/50 transition-all duration-300 hover:bg-white" data-slide="4" aria-label="Go to Slide 5"></button>
+                <button class="indicator-dot w-2 h-2 rounded-full bg-white/50 transition-all duration-300 hover:bg-white" data-slide="5" aria-label="Go to Slide 6"></button>
             </div>
         </div>
     </div>
+</div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const carouselContainer = document.getElementById('carousel-container');
-            const slides = carouselContainer.querySelectorAll('.slide');
-            const dots = carouselContainer.querySelectorAll('.indicator-dot');
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const carouselContainer = document.getElementById('carousel-container');
+        const slides = carouselContainer.querySelectorAll('.slide');
+        const dots = carouselContainer.querySelectorAll('.indicator-dot');
 
-            let currentSlideIndex = 0;
-            const slideDuration = 5000; // 5 seconds per slide
-            let slideInterval;
+        let currentSlideIndex = 0;
+        const slideDuration = 5000; // 5 seconds per slide
+        let slideInterval;
 
-            // Update visible slide and indicator dots safely without line stretching
-            function updateSlides(newIndex) {
-                if (newIndex < 0) {
-                    currentSlideIndex = slides.length - 1;
-                } else if (newIndex >= slides.length) {
-                    currentSlideIndex = 0;
+        function updateSlides(newIndex) {
+            if (newIndex < 0) {
+                currentSlideIndex = slides.length - 1;
+            } else if (newIndex >= slides.length) {
+                currentSlideIndex = 0;
+            } else {
+                currentSlideIndex = newIndex;
+            }
+
+            slides.forEach((slide, i) => {
+                if (i === currentSlideIndex) {
+                    slide.classList.remove('opacity-0', 'pointer-events-none');
+                    slide.classList.add('opacity-100', 'pointer-events-auto');
                 } else {
-                    currentSlideIndex = newIndex;
+                    slide.classList.remove('opacity-100', 'pointer-events-auto');
+                    slide.classList.add('opacity-0', 'pointer-events-none');
                 }
-
-                // Smoothly cross-fade slides
-                slides.forEach((slide, i) => {
-                    if (i === currentSlideIndex) {
-                        slide.classList.replace('opacity-0', 'opacity-100');
-                        slide.classList.replace('pointer-events-none', 'pointer-events-auto');
-                    } else {
-                        slide.classList.replace('opacity-100', 'opacity-0');
-                        slide.classList.replace('pointer-events-auto', 'pointer-events-none');
-                    }
-                });
-
-                // Update styling of dots (remains circular, avoids looking like lines)
-                dots.forEach((dot, i) => {
-                    if (i === currentSlideIndex) {
-                        dot.classList.add('bg-white', 'scale-125');
-                        dot.classList.remove('bg-white/50', 'scale-100');
-                    } else {
-                        dot.classList.remove('bg-white', 'scale-125');
-                        dot.classList.add('bg-white/50', 'scale-100');
-                    }
-                });
-            }
-
-            // Carousel Autoplay functions
-            function startAutoplay() {
-                clearInterval(slideInterval);
-                slideInterval = setInterval(() => {
-                    updateSlides(currentSlideIndex + 1);
-                }, slideDuration);
-            }
-
-            function stopAutoplay() {
-                clearInterval(slideInterval);
-            }
-
-            dots.forEach((dot) => {
-                dot.addEventListener('click', () => {
-                    const index = parseInt(dot.getAttribute('data-slide'));
-                    updateSlides(index);
-                    startAutoplay(); // Reset timer on manual click
-                });
             });
 
-            // Touch swipe gestures for mobile devices
-            let touchStartX = 0;
-            let touchEndX = 0;
-            
-            carouselContainer.addEventListener('touchstart', (e) => {
-                touchStartX = e.changedTouches[0].screenX;
-                stopAutoplay();
-            }, { passive: true });
-
-            carouselContainer.addEventListener('touchend', (e) => {
-                touchEndX = e.changedTouches[0].screenX;
-                handleSwipeGesture();
-                startAutoplay();
-            }, { passive: true });
-
-            function handleSwipeGesture() {
-                const threshold = 50; // min swipe distance in px
-                if (touchStartX - touchEndX > threshold) {
-                    updateSlides(currentSlideIndex + 1);
-                } else if (touchEndX - touchStartX > threshold) {
-                    updateSlides(currentSlideIndex - 1);
+            dots.forEach((dot, i) => {
+                if (i === currentSlideIndex) {
+                    dot.classList.add('bg-white', 'scale-125');
+                    dot.classList.remove('bg-white/50', 'scale-100');
+                } else {
+                    dot.classList.remove('bg-white', 'scale-125');
+                    dot.classList.add('bg-white/50', 'scale-100');
                 }
-            }
+            });
+        }
 
-            // Pause autoplay when hovering over desktop site
-            carouselContainer.addEventListener('mouseenter', stopAutoplay);
-            carouselContainer.addEventListener('mouseleave', startAutoplay);
+        function startAutoplay() {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(() => {
+                updateSlides(currentSlideIndex + 1);
+            }, slideDuration);
+        }
 
-            // Initialize carousel layout state
-            updateSlides(0);
-            startAutoplay();
+        function stopAutoplay() {
+            clearInterval(slideInterval);
+        }
+
+        dots.forEach((dot) => {
+            dot.addEventListener('click', () => {
+                const index = parseInt(dot.getAttribute('data-slide'));
+                updateSlides(index);
+                startAutoplay();
+            });
         });
-    </script>
+
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        carouselContainer.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            stopAutoplay();
+        }, { passive: true });
+
+        carouselContainer.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipeGesture();
+            startAutoplay();
+        }, { passive: true });
+
+        function handleSwipeGesture() {
+            const threshold = 50;
+            if (touchStartX - touchEndX > threshold) {
+                updateSlides(currentSlideIndex + 1);
+            } else if (touchEndX - touchStartX > threshold) {
+                updateSlides(currentSlideIndex - 1);
+            }
+        }
+
+        carouselContainer.addEventListener('mouseenter', stopAutoplay);
+        carouselContainer.addEventListener('mouseleave', startAutoplay);
+
+        updateSlides(0);
+        startAutoplay();
+    });
+</script>
 </section>
 
     <!-- About Us Section --> 
