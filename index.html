@@ -80,29 +80,32 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #0EA5E9;
         }
-/* Keep the yellow background fully filling the container */
+/* Force the yellow container to stretch fully to the bottom border of every card */
 .bg-\[\#FFE094\] {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: flex-start !important;
+    display: block !important;
+    position: relative !important;
     flex-grow: 1 !important;
+    height: 100% !important;
+    min-height: 110px !important; /* Forces uniform height on mobile and desktop views */
     padding: 12px !important;
+    box-sizing: border-box !important;
 }
 
-/* Let the name container adapt to 1 or 2 lines naturally without fixed heights */
+/* Position the name perfectly at the top of the yellow card block */
 .bg-\[\#FFE094\] h4 {
     display: block !important;
     text-align: center !important;
-    margin: 0 0 2px 0 !important; /* Forces the very next line to stay right under it */
+    margin: 0 !important;
     padding: 0 !important;
     line-height: 1.2 !important;
 }
 
-/* Keep the title completely locked onto the immediate next line with zero extra gap */
+/* Force the title/role onto the absolute next line with zero padding or margin spaces */
 .bg-\[\#FFE094\] p {
     display: block !important;
+    position: relative !important;
     text-align: center !important;
-    margin: 0 !important;
+    margin: 4px 0 0 0 !important; /* Absolute tight single-spaced break line gap */
     padding: 0 !important;
     line-height: 1.2 !important;
 }
