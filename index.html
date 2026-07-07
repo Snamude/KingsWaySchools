@@ -53,16 +53,18 @@
     padding: 12px !important;
 } 
 
-/* Clean override to perfectly center icons inside the w-10 h-10 containers */
-.w-10.h-10.rounded-xl.flex i {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 100% !important;
-    height: 100% !important;
+/* Replace all previous icon alignment snippets with this single block */
+.w-10.h-10.rounded-xl {
+    display: grid !important;
+    place-items: center !important;
+    place-content: center !important;
+}
+
+.w-10.h-10.rounded-xl i,
+.w-10.h-10.rounded-xl svg {
     margin: 0 !important;
     padding: 0 !important;
-    line-height: 1 !important;
+    display: block !important;
 }
            /* Lightbox styling */
         #lightbox {
