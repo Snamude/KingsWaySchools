@@ -36,10 +36,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* Ensure the section header stays visible beneath sticky headers on all mobile screens */
-        [id*="staff"], section {
-        scroll-margin-top: 90px !important;
-        }
+      /* Tell the browser to automatically account for the sticky menu height on all screens */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem !important; /* Dynamically cushions the top for both mobile devices */
+}
            /* Lightbox styling */
         #lightbox {
             display: none;
