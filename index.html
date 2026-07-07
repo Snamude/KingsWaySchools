@@ -53,18 +53,20 @@
     padding: 12px !important;
 } 
 
-/* Replace all previous icon alignment snippets with this single block */
-.w-10.h-10.rounded-xl {
-    display: grid !important;
-    place-items: center !important;
-    place-content: center !important;
+/* Target the icon container directly to override any injected SVG layout rules */
+.w-10.h-10.rounded-xl.flex.items-center.justify-center {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
 
-.w-10.h-10.rounded-xl i,
-.w-10.h-10.rounded-xl svg {
+/* Strip any dynamic width, height, margins, or inline offsets from the icon graphic itself */
+.w-10.h-10.rounded-xl.flex.items-center.justify-center i,
+.w-10.h-10.rounded-xl.flex.items-center.justify-center svg {
     margin: 0 !important;
     padding: 0 !important;
-    display: block !important;
+    position: static !important;
+    transform: none !important;
 }
            /* Lightbox styling */
         #lightbox {
