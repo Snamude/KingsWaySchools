@@ -81,13 +81,30 @@
             background: #0EA5E9;
         }
 
-        /* Force the name headings to take up exactly the same height so they line up perfectly */
+/* Fix text boxes alignment and remove large gaps without touching HTML */
+.bg-\[\#FFE094\] {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
+/* Force names to occupy an identical height box with zero extra spacing beneath */
 .bg-\[\#FFE094\] h4 {
-    min-height: 3.5rem; /* Ensures a consistent baseline for names */
+    min-height: 2.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 0.25rem; /* Controls the exact gap directly to the next line role */
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.2;
+}
+
+/* Keep the role on the immediate next line with normal spacing */
+.bg-\[\#FFE094\] p {
+    margin-top: 0.25rem !important;
+    padding: 0 !important;
 }
     </style>
 </head>
