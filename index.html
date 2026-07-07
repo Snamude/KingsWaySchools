@@ -81,33 +81,35 @@
             background: #0EA5E9;
         }
 
-/* Change the text container into a tight grid layout instead of vertical flex */
+/* Tighten the text box wrapper and force elements to stick to the top */
 .bg-\[\#FFE094\] {
-    display: grid !important;
-    grid-template-rows: auto auto !important;
-    align-content: start !important; /* Forces elements to stick to the top with no stretching */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important; /* Prevents vertical space distribution completely */
+    align-items: center !important;
     padding: 12px !important;
 }
 
-/* Force names into a static height box so their baselines remain aligned across cards */
+/* Maintain a consistent baseline block height for the names */
 .bg-\[\#FFE094\] h4 {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     text-align: center !important;
-    min-height: 48px !important;
-    height: 48px !important;
+    min-height: 44px !important;
+    height: 44px !important;
     margin: 0 !important;
     padding: 0 !important;
 }
 
-/* Force the role onto the absolute next line with zero padding or margin gaps */
+/* Snap the role onto the absolute next line with 0 extra margins */
 .bg-\[\#FFE094\] p {
+    display: block !important;
+    text-align: center !important;
     margin: 0 !important;
     padding: 0 !important;
     line-height: 1.2 !important;
-    text-align: center !important;
-}
+} 
     </style>
 </head>
 <body class="font-sans bg-[#fffdf0] text-pastel-slate antialiased leading-relaxed">
