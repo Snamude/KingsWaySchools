@@ -37,6 +37,23 @@
     
     <style>
 
+        /* Perfect centering for Vision, Mission, and Motto icon containers */
+.w-12.h-12.rounded-xl.bg-\[\#D59F28\] {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Force the embedded icon graphic to sit dead-center in the container */
+.w-12.h-12.rounded-xl.bg-\[\#D59F28\] i,
+.w-12.h-12.rounded-xl.bg-\[\#D59F28\] svg {
+    margin: 0 !important;
+    padding: 0 !important;
+    position: static !important;
+    transform: none !important;
+    display: inline-block !important;
+}
+
         /* Force the text and icon to stay side-by-side on the exact same line */
 button[type="submit"].bg-\[\#128C7E\] {
     display: inline-flex !important;
