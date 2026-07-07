@@ -81,35 +81,36 @@
             background: #0EA5E9;
         }
 
-/* Tighten the text box wrapper and force elements to stick to the top */
+/* Collapse the text container completely and disable flex grow spacing */
 .bg-\[\#FFE094\] {
     display: flex !important;
     flex-direction: column !important;
-    justify-content: flex-start !important; /* Prevents vertical space distribution completely */
+    justify-content: flex-start !important;
     align-items: center !important;
+    height: auto !important;
+    flex-grow: 0 !important; /* Forces the box to shrink to text height */
     padding: 12px !important;
 }
 
-/* Maintain a consistent baseline block height for the names */
+/* Remove fixed heights from names so everything sits naturally on the next line */
 .bg-\[\#FFE094\] h4 {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
-    min-height: 44px !important;
-    height: 44px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-/* Snap the role onto the absolute next line with 0 extra margins */
-.bg-\[\#FFE094\] p {
-    display: block !important;
+    display: inline-block !important;
+    width: 100% !important;
     text-align: center !important;
     margin: 0 !important;
     padding: 0 !important;
     line-height: 1.2 !important;
-} 
+}
+
+/* Force the title/role to sit directly underneath with zero extra gap */
+.bg-\[\#FFE094\] p {
+    display: inline-block !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.2 !important;
+}
     </style>
 </head>
 <body class="font-sans bg-[#fffdf0] text-pastel-slate antialiased leading-relaxed">
