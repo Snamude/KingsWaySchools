@@ -81,32 +81,32 @@
             background: #0EA5E9;
         }
 
-/* Instantly break the flexbox engine stretching the text card completely */
+/* Change the text container into a tight grid layout instead of vertical flex */
 .bg-\[\#FFE094\] {
-    display: block !important;
+    display: grid !important;
+    grid-template-rows: auto auto !important;
+    align-content: start !important; /* Forces elements to stick to the top with no stretching */
     padding: 12px !important;
-    height: auto !important;
 }
 
-/* Force names into a precise box height, removing any inner layout margins or paddings */
+/* Force names into a static height box so their baselines remain aligned across cards */
 .bg-\[\#FFE094\] h4 {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     text-align: center !important;
-    min-height: 48px !important; 
+    min-height: 48px !important;
     height: 48px !important;
     margin: 0 !important;
     padding: 0 !important;
 }
 
-/* Force the paragraph role onto the immediate next line with absolutely no double spacing or extra gap */
+/* Force the role onto the absolute next line with zero padding or margin gaps */
 .bg-\[\#FFE094\] p {
-    display: block !important;
-    text-align: center !important;
     margin: 0 !important;
     padding: 0 !important;
     line-height: 1.2 !important;
+    text-align: center !important;
 }
     </style>
 </head>
