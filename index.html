@@ -52,6 +52,18 @@
     flex-grow: 1 !important; /* Stretches the yellow color to the bottom of both cards */
     padding: 12px !important;
 } 
+
+/* Clean override to perfectly center icons inside the w-10 h-10 containers */
+.w-10.h-10.rounded-xl.flex i {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+}
            /* Lightbox styling */
         #lightbox {
             display: none;
@@ -1693,7 +1705,7 @@ function switchTab(targetSect) {
                     <div class="space-y-4">
                         <div class="flex items-start space-x-3.5">
                             <div class="w-10 h-10 rounded-xl bg-white border border-[#D59F28] flex items-center justify-center text-pastel-brand shrink-0">
-                                <i class="fa-solid fa-location-dot text-center"></i>
+                                <i class="fa-solid fa-location-dot"></i>
                             </div>
                             <div> 
                                 <h4 class="font-bold text-sm text-pastel-deep">Physical Campus Address</h4>
@@ -1703,7 +1715,7 @@ function switchTab(targetSect) {
  
                         <div class="flex items-start space-x-3.5">
                             <div class="w-10 h-10 rounded-xl bg-white border border-[#D59F28] flex items-center justify-center text-pastel-brand shrink-0">
-                                <i class="fa-solid fa-envelope text-center"></i>
+                                <i class="fa-solid fa-envelope"></i>
                             </div>
                             <div>
     <h4 class="font-bold text-sm text-pastel-deep">Email</h4>
@@ -1715,7 +1727,7 @@ function switchTab(targetSect) {
 
                         <div class="flex items-start space-x-3.5">
                             <div class="w-10 h-10 rounded-xl bg-white border border-[#D59F28] flex items-center justify-center text-pastel-brand shrink-0">
-                                <i class="fa-solid fa-phone text-center"></i>
+                                <i class="fa-solid fa-phone"></i>
                             </div>
                             <div>
                                 <h4 class="font-bold text-sm text-pastel-deep">Phone number</h4>
