@@ -81,32 +81,32 @@
             background: #0EA5E9;
         }
 
-/* Force the text container to stretch to the exact bottom of the card layout */
+/* Ensure the yellow background fills all cards fully */
 .bg-\[\#FFE094\] {
     display: flex !important;
     flex-direction: column !important;
-    justify-content: flex-start !important; /* Locks text elements tightly to the top */
-    flex-grow: 1 !important; /* Stretches the yellow background to fill all empty space */
+    justify-content: flex-start !important;
+    flex-grow: 1 !important;
     padding: 12px !important;
 }
 
-/* Force names into a standardized row baseline layout block */
+/* Tighten the name box height to close the gap */
 .bg-\[\#FFE094\] h4 {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     text-align: center !important;
-    min-height: 48px !important;
-    height: 48px !important;
+    min-height: 38px !important;
+    height: 38px !important;
     margin: 0 !important;
     padding: 0 !important;
 }
 
-/* Instantly lock the role text onto the very next line with no double-spacing gaps */
+/* Eliminate any remaining gap and pull the role text up to the next line */
 .bg-\[\#FFE094\] p {
     display: block !important;
     text-align: center !important;
-    margin: 0 !important;
+    margin: -2px 0 0 0 !important; /* Negative top margin removes any remaining pixel space */
     padding: 0 !important;
     line-height: 1.2 !important;
 }
